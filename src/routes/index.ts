@@ -25,6 +25,9 @@ router.get('/integration.json', (req, res) => {
 			},
 			is_active: true,
 			integration_type: 'output',
+			key_features: [
+				'- Logs payloads for errors, speed monitoring and ecommerce insights to ecomtrace.site',
+			],
 			integration_category: 'E-commerce & Retail',
 			author: 'Onesi Ukanah',
 			website: baseUrl,
