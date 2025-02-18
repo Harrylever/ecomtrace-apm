@@ -1,11 +1,13 @@
 import express from 'express';
 import middleware from './middleware';
-import routes from './routes';
+import indexRoutes from './routes/index';
+import repeaterRoutes from './routes/repeater';
 import './config/env';
 
 const app = express();
 
 middleware(app);
-app.use('/', routes);
+app.use('/', indexRoutes);
+app.use('/repeater', repeaterRoutes);
 
 export default app;
