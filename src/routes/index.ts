@@ -33,7 +33,7 @@ router.get('/integration.json', (req, res) => {
 			],
 			integration_category: 'E-commerce & Retail',
 			author: 'Onesi Ukanah',
-			website: `Website: ${config.apmWebsiteUrl}`,
+			website: config.apmWebsiteUrl,
 			settings: [
 				{
 					label: 'forward-type',
