@@ -1,6 +1,7 @@
 import express from 'express';
 import axios from 'axios';
 import logger from '../config/logger';
+import config from '../config/env';
 
 const router = express.Router();
 
@@ -22,7 +23,7 @@ router.post('/target_url', async (req, res) => {
 		return;
 	}
 
-	const webhookUrl = `https://api.ecomtrace.site/receive-repeater?forward-type=${repeater_type}`;
+	const webhookUrl = `${config.apmWebsiteApiUrl}/receive-repeater?forward_type=${repeater_type}`;
 
 	try {
 		const response = await axios.post(

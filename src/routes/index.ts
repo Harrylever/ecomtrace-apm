@@ -1,4 +1,5 @@
 import express from 'express';
+import config from '../config/env';
 
 const router = express.Router();
 
@@ -30,7 +31,7 @@ router.get('/integration.json', (req, res) => {
 			],
 			integration_category: 'E-commerce & Retail',
 			author: 'Onesi Ukanah',
-			website: baseUrl,
+			website: config.apmWebsiteUrl,
 			settings: [
 				{
 					label: 'forward-type',
